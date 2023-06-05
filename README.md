@@ -36,10 +36,15 @@ API Endpoints
 The following endpoints are available:
 
 POST /api/auth/register: Create a new user.
+
 POST /api/auth/login: Authenticate a user and receive a JWT token.
+
 GET /api/users: Retrieve all users.
+
 GET /api/users/:id: Retrieve a specific user by ID.
+
 PUT /api/users/:id: Update a specific user by ID.
+
 DELETE /api/users/:id: Delete a specific user by ID.
 
 Make sure to include the JWT token in the Authorization header for authenticated routes.

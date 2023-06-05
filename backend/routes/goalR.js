@@ -1,10 +1,11 @@
 const express = require('express')
 const router = express.Router()
 const {GetGoals, PutGoals, SetGoals, DeleteGoals} = require('../controllers/control')
+const {protect} = require('../middleware/authMiddleWare')
 
-const { model } = require('mongoose')
-
-    router.get('/', GetGoals).post('/',SetGoals)
-    router.delete('/:id', DeleteGoals).put('/:id', PutGoals)
+    router.get('/', GetGoals)
+    router.post('/', SetGoals)
+    router.delete('/:id', DeleteGoals)
+    router.put('/:id', PutGoals)
 
 module.exports = router 
